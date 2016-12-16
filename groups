@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-836b8f278efed461a7504b48936504967f8395d8	openstack/ironic-staging-drivers-distgit-ptl
+# UUID          Group Name
+False 	Non-Interactive Users
+ab438a5501d6afd27c4207e90312fb54c555371e       	openstack/ironic-staging-drivers-distgit-core
+836b8f278efed461a7504b48936504967f8395d8        	openstack/ironic-staging-drivers-distgit-ptl
+global:Registered-Users		Registered Users
