@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fab399f4_fdf8834b",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2016-12-19T14:54:38Z",
+      "side": 1,
+      "message": "could we consider using the conditional with_doc pattern from openstack-glance or openstack-tripleo-heat-templates?  Not required but nice to have separation of generation of docs.\n\nhttps://review.rdoproject.org/r/gitweb?p\u003dopenstack/tripleo-validations-distgit.git;a\u003dblob;f\u003dopenstack-tripleo-validations.spec;h\u003da792375963bf16e6463d637408968ef7634cdfaa;hb\u003dHEAD#l3",
+      "revId": "31337452ff08506e0d1784300a9c4a809efdbbf4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_3d9afb14",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2016-12-19T14:54:38Z",
+      "side": 1,
+      "message": "are these unittests or are there tempest tests rolled into this as well?",
+      "revId": "31337452ff08506e0d1784300a9c4a809efdbbf4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_7ded538b",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 69,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2016-12-19T14:54:38Z",
+      "side": 1,
+      "message": "Missing %check section?",
+      "revId": "31337452ff08506e0d1784300a9c4a809efdbbf4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_1d9537e4",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 74,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2016-12-19T14:54:38Z",
+      "side": 1,
+      "message": "Thanks for making sure to break out LICENSE",
+      "revId": "31337452ff08506e0d1784300a9c4a809efdbbf4",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
