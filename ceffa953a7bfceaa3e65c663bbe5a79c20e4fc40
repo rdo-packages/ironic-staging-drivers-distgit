@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fab399f4_40798292",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 127
+      },
+      "writtenOn": "2016-12-19T16:44:11Z",
+      "side": 1,
+      "message": "These should be BuildRequires as well. Since we are running tests during the build",
+      "range": {
+        "startLine": 53,
+        "startChar": 0,
+        "endLine": 56,
+        "endChar": 30
+      },
+      "revId": "ceffa953a7bfceaa3e65c663bbe5a79c20e4fc40",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
