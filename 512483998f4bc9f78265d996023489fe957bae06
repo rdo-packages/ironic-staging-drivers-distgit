@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fab399f4_dd573f25",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-12-19T15:43:10Z",
+      "side": 1,
+      "message": "The tests package should require the main package.",
+      "revId": "512483998f4bc9f78265d996023489fe957bae06",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
