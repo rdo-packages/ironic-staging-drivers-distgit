@@ -16,6 +16,24 @@
       "revId": "512483998f4bc9f78265d996023489fe957bae06",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fab399f4_3d367b04",
+        "filename": "openstack-ironic-staging-drivers.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 309
+      },
+      "writtenOn": "2016-12-19T15:49:09Z",
+      "side": 1,
+      "message": "Ops, thanks Javier. I will add",
+      "parentUuid": "fab399f4_dd573f25",
+      "revId": "512483998f4bc9f78265d996023489fe957bae06",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
