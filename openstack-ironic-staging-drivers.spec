@@ -16,20 +16,21 @@ Source0: http://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar
 BuildArch: noarch
 
 BuildRequires: python2-devel
-BuildRequires: python-pbr
-BuildRequires: python-setuptools
+BuildRequires: python2-pbr
+BuildRequires: python2-setuptools
 BuildRequires: git
 
 Requires: openstack-ironic-conductor
-Requires: python-ironic-lib
-Requires: python-oslo-concurrency
-Requires: python-oslo-config
-Requires: python-oslo-i18n
-Requires: python-oslo-log
-Requires: python-oslo-utils
-Requires: python-oslo-service
-Requires: python-six
-Requires: python-jsonschema
+Requires: python-ironic-lib >= 2.5.0
+Requires: python2-oslo-concurrency >= 3.25.0
+Requires: python2-oslo-config >= 5.1.0
+Requires: python2-oslo-i18n >= 3.15.3
+Requires: python2-oslo-log >= 3.36.0
+Requires: python2-oslo-utils >= 3.33.0
+Requires: python2-oslo-service >= 1.24.0
+Requires: python2-six >= 1.10.0
+Requires: python2-jsonschema >= 2.6.0
+Requires: python2-pbr >= 2.0.0
 
 %description
 The Ironic Staging Drivers is used to hold out-of-tree Ironic drivers
@@ -40,8 +41,8 @@ time which is required by Ironic.
 %package doc
 Summary: Ironic Staging Drivers documentation
 
-BuildRequires: python-sphinx
-BuildRequires: python-oslo-sphinx
+BuildRequires: python2-sphinx
+BuildRequires: python2-oslo-sphinx
 
 %description doc
 This package contains the Ironic Staging Drivers documentation.
@@ -52,22 +53,22 @@ Summary: Ironic Staging Drivers unit tests
 Requires: %{name} = %{version}-%{release}
 
 BuildRequires: python-ironic-tests
-BuildRequires: python-mock
-BuildRequires: python-oslotest
-BuildRequires: python-os-testr
-BuildRequires: python-testrepository
-BuildRequires: python-testscenarios
-BuildRequires: python-testresources
-BuildRequires: python-testtools
+BuildRequires: python2-mock
+BuildRequires: python2-oslotest
+BuildRequires: python2-os-testr
+BuildRequires: python2-testrepository
+BuildRequires: python2-testscenarios
+BuildRequires: python2-testresources
+BuildRequires: python2-testtools
 
 Requires: python-ironic-tests
-Requires: python-mock
-Requires: python-oslotest
-Requires: python-os-testr
-Requires: python-testrepository
-Requires: python-testscenarios
-Requires: python-testresources
-Requires: python-testtools
+Requires: python2-mock
+Requires: python2-oslotest
+Requires: python2-os-testr
+Requires: python2-testrepository
+Requires: python2-testscenarios
+Requires: python2-testresources
+Requires: python2-testtools
 
 %description -n python-ironic-staging-drivers-tests
 This package contains the Ironic Staging Drivers unit test files.
