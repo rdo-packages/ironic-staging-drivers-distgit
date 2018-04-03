@@ -114,3 +114,4 @@ rm -rf html/.{doctrees,buildinfo}
 %changelog
 * Tue Dec 06 2016 Lucas Alvares Gomes <lucasagomes@gmail.com> 0.4.0-1
 – Initial Packaging
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/ironic-staging-drivers/commit/?id=d27bcf030eb317f2bb25996ba6b304b54b91662d
