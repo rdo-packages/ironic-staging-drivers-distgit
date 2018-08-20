@@ -22,8 +22,8 @@ BuildRequires: git
 
 Requires: openstack-ironic-conductor
 Requires: python-ironic-lib >= 2.5.0
-Requires: python2-oslo-concurrency >= 3.25.0
-Requires: python2-oslo-config >= 5.1.0
+Requires: python2-oslo-concurrency >= 3.26.0
+Requires: python2-oslo-config >= 2:5.2.0
 Requires: python2-oslo-i18n >= 3.15.3
 Requires: python2-oslo-log >= 3.36.0
 Requires: python2-oslo-utils >= 3.33.0
