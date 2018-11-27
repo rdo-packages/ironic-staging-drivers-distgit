@@ -1,3 +1,14 @@
+# Macros for py2/py3 compatibility
+%if 0%{?fedora} || 0%{?rhel} > 7
+%global pyver %{python3_pkgversion}
+%else
+%global pyver 2
+%endif
+%global pyver_bin python%{pyver}
+%global pyver_sitelib %python%{pyver}_sitelib
+%global pyver_install %py%{pyver}_install
+%global pyver_build %py%{pyver}_build
+# End of macros for py2/py3 compatibility
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global sname ironic-staging-drivers
@@ -15,22 +26,27 @@ Source0: http://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar
 
 BuildArch: noarch
 
-BuildRequires: python2-devel
-BuildRequires: python2-pbr
-BuildRequires: python2-setuptools
+BuildRequires: python%{pyver}-devel
+BuildRequires: python%{pyver}-pbr
+BuildRequires: python%{pyver}-setuptools
 BuildRequires: git
 
 Requires: openstack-ironic-conductor
-Requires: python-ironic-lib >= 2.5.0
-Requires: python2-oslo-concurrency >= 3.26.0
-Requires: python2-oslo-config >= 2:5.2.0
-Requires: python2-oslo-i18n >= 3.15.3
-Requires: python2-oslo-log >= 3.36.0
-Requires: python2-oslo-utils >= 3.33.0
-Requires: python2-oslo-service >= 1.24.0
-Requires: python2-six >= 1.10.0
-Requires: python2-jsonschema >= 2.6.0
-Requires: python2-pbr >= 2.0.0
+Requires: python%{pyver}-ironic-lib >= 2.5.0
+Requires: python%{pyver}-oslo-concurrency >= 3.26.0
+Requires: python%{pyver}-oslo-config >= 2:5.2.0
+Requires: python%{pyver}-oslo-i18n >= 3.15.3
+Requires: python%{pyver}-oslo-log >= 3.36.0
+Requires: python%{pyver}-oslo-utils >= 3.33.0
+Requires: python%{pyver}-oslo-service >= 1.24.0
+Requires: python%{pyver}-six >= 1.10.0
+Requires: python%{pyver}-jsonschema >= 2.6.0
+Requires: python%{pyver}-pbr >= 2.0.0
+%if 0%{?fedora} || 0%{?rhel} > 7
+Requires: python-openwsman%{pyver}
+%else
+Requires: python-openwsman
+%endif
 
 %description
 The Ironic Staging Drivers is used to hold out-of-tree Ironic drivers
@@ -41,36 +57,37 @@ time which is required by Ironic.
 %package doc
 Summary: Ironic Staging Drivers documentation
 
-BuildRequires: python2-sphinx
-BuildRequires: python2-oslo-sphinx
+BuildRequires: python%{pyver}-sphinx
+BuildRequires: python%{pyver}-oslo-sphinx
 
 %description doc
 This package contains the Ironic Staging Drivers documentation.
 %endif
 
-%package -n python-ironic-staging-drivers-tests
+%package -n python%{pyver}-ironic-staging-drivers-tests
 Summary: Ironic Staging Drivers unit tests
+%{?python_provide:%python_provide python%{pyver}-ironic-staging-drivers-tests}
 Requires: %{name} = %{version}-%{release}
 
-BuildRequires: python-ironic-tests
-BuildRequires: python2-mock
-BuildRequires: python2-oslotest
-BuildRequires: python2-os-testr
-BuildRequires: python2-testrepository
-BuildRequires: python2-testscenarios
-BuildRequires: python2-testresources
-BuildRequires: python2-testtools
+BuildRequires: python%{pyver}-ironic-tests
+BuildRequires: python%{pyver}-mock
+BuildRequires: python%{pyver}-oslotest
+BuildRequires: python%{pyver}-os-testr
+BuildRequires: python%{pyver}-testrepository
+BuildRequires: python%{pyver}-testscenarios
+BuildRequires: python%{pyver}-testresources
+BuildRequires: python%{pyver}-testtools
 
-Requires: python-ironic-tests
-Requires: python2-mock
-Requires: python2-oslotest
-Requires: python2-os-testr
-Requires: python2-testrepository
-Requires: python2-testscenarios
-Requires: python2-testresources
-Requires: python2-testtools
+Requires: python%{pyver}-ironic-tests
+Requires: python%{pyver}-mock
+Requires: python%{pyver}-oslotest
+Requires: python%{pyver}-os-testr
+Requires: python%{pyver}-testrepository
+Requires: python%{pyver}-testscenarios
+Requires: python%{pyver}-testresources
+Requires: python%{pyver}-testtools
 
-%description -n python-ironic-staging-drivers-tests
+%description -n python%{pyver}-ironic-staging-drivers-tests
 This package contains the Ironic Staging Drivers unit test files.
 
 %prep
@@ -80,26 +97,26 @@ This package contains the Ironic Staging Drivers unit test files.
 rm -f *requirements.txt
 
 %build
-%py2_build
+%{pyver_build}
 
 %if 0%{?with_doc}
 # generate html docs
-%{__python2} setup.py build_sphinx
-# remove the sphinx-build leftovers
+%{pyver_bin} setup.py build_sphinx
+# remove the sphinx-build-%{pyver} leftovers
 rm -rf html/.{doctrees,buildinfo}
 %endif
 
 %check
-%{__python2} setup.py test
+%{pyver_bin} setup.py test
 
 %install
-%py2_install
+%{pyver_install}
 
 %files -n openstack-%{sname}
 %license LICENSE
-%{python2_sitelib}/%{module}
-%{python2_sitelib}/%{module}-*.egg-info
-%exclude %{python2_sitelib}/%{module}/tests
+%{pyver_sitelib}/%{module}
+%{pyver_sitelib}/%{module}-*.egg-info
+%exclude %{pyver_sitelib}/%{module}/tests
 
 %if 0%{?with_doc}
 %files doc
@@ -107,9 +124,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc doc/build/html README.rst
 %endif
 
-%files -n python-ironic-staging-drivers-tests
+%files -n python%{pyver}-ironic-staging-drivers-tests
 %license LICENSE
-%{python2_sitelib}/%{module}/tests
+%{pyver_sitelib}/%{module}/tests
 
 %changelog
 * Tue Dec 06 2016 Lucas Alvares Gomes <lucasagomes@gmail.com> 0.4.0-1
