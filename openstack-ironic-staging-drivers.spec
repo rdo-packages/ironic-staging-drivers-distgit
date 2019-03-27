@@ -16,8 +16,8 @@
 %global with_doc %{!?_without_doc:1}%{?_without_doc:0}
 
 Name: openstack-%{sname}
-Version: XXX
-Release: XXX
+Version: 0.11.0
+Release: 1%{?dist}
 Summary: Staging drivers for OpenStack Ironic
 License: ASL 2.0
 URL: http://launchpad.net/%{sname}/
@@ -129,5 +129,8 @@ rm -rf html/.{doctrees,buildinfo}
 %{pyver_sitelib}/%{module}/tests
 
 %changelog
+* Wed Mar 27 2019 RDO <dev@lists.rdoproject.org> 0.11.0-1
+- Update to 0.11.0
+
 * Tue Dec 06 2016 Lucas Alvares Gomes <lucasagomes@gmail.com> 0.4.0-1
 – Initial Packaging
