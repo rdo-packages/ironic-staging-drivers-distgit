@@ -17,7 +17,7 @@
 
 Name: openstack-%{sname}
 Version: 0.11.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Staging drivers for OpenStack Ironic
 License: ASL 2.0
 URL: http://launchpad.net/%{sname}/
@@ -44,7 +44,7 @@ Requires: python%{pyver}-oslo-i18n >= 3.15.3
 Requires: python%{pyver}-oslo-log >= 3.36.0
 Requires: python%{pyver}-oslo-utils >= 3.33.0
 Requires: python%{pyver}-oslo-service >= 1.24.0
-Requires: python%{pyver}-six >= 1.10.0
+Requires: python%{pyver}-six >= 1.12.0
 Requires: python%{pyver}-jsonschema >= 2.6.0
 Requires: python%{pyver}-pbr >= 2.0.0
 
@@ -129,6 +129,9 @@ rm -rf html/.{doctrees,buildinfo}
 %{pyver_sitelib}/%{module}/tests
 
 %changelog
+* Wed Oct 23 2019 Lon Hohberger <lhh@redhat.com> 0.11.0-2
+- Fix python-six requirement to match upstream
+
 * Wed Mar 27 2019 RDO <dev@lists.rdoproject.org> 0.11.0-1
 - Update to 0.11.0
 
