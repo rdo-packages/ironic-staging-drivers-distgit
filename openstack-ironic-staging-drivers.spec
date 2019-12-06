@@ -129,5 +129,3 @@ rm -rf html/.{doctrees,buildinfo}
 %{pyver_sitelib}/%{module}/tests
 
 %changelog
-* Tue Dec 06 2016 Lucas Alvares Gomes <lucasagomes@gmail.com> 0.4.0-1
-– Initial Packaging
