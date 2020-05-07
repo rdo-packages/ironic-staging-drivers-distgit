@@ -11,7 +11,7 @@ Summary: Staging drivers for OpenStack Ironic
 License: ASL 2.0
 URL: http://launchpad.net/%{sname}/
 
-Source0: http://tarballs.openstack.org/%{sname}/%{sname}-%{upstream_version}.tar.gz
+Source0: http://tarballs.opendev.org/x/%{sname}/%{sname}-%{upstream_version}.tar.gz
 
 BuildArch: noarch
 
