@@ -22,12 +22,12 @@ BuildRequires: git
 BuildRequires: openwsman-python3
 
 Requires: openstack-ironic-conductor
-Requires: python3-ironic-lib >= 2.5.0
+Requires: python3-ironic-lib >= 2.17.1
 Requires: python3-oslo-concurrency >= 3.26.0
 Requires: python3-oslo-config >= 2:5.2.0
 Requires: python3-oslo-i18n >= 3.15.3
 Requires: python3-oslo-log >= 3.36.0
-Requires: python3-oslo-utils >= 3.33.0
+Requires: python3-oslo-utils >= 3.40.0
 Requires: python3-oslo-service >= 1.24.0
 Requires: python3-jsonschema >= 2.6.0
 Requires: python3-pbr >= 2.0.0
