@@ -31,7 +31,7 @@ BuildRequires:  openstack-macros
 BuildRequires: python3-devel
 BuildRequires: python3-pbr
 BuildRequires: python3-setuptools
-BuildRequires: git
+BuildRequires: git-core
 BuildRequires: openwsman-python3
 
 Requires: openstack-ironic-conductor
