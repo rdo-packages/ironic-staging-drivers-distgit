@@ -77,6 +77,7 @@ This package contains the Ironic Staging Drivers unit test files.
 sed -i /.*-c{env:.*_CONSTRAINTS_FILE.*/d tox.ini
 sed -i /^minversion.*/d tox.ini
 sed -i /^requires.*virtualenv.*/d tox.ini
+sed -i /^[[:space:]]*LC_ALL.*/d tox.ini
 
 # Exclude some bad-known BRs
 for pkg in %{excluded_brs};do
